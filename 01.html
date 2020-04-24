@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face { font-family: 'MapoFlowerIsland'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+    body{position: relative; font-family: 'MapoFlowerIsland'; font-size: 25px;;
+   
+ 
+   
+    }
+    h2, h3{
+        top: 100px;
+        position: relative;
+        text-align: center;;}
+    .text{position:absolute; display: block; left: 44%; margin-bottom: 10%;}
+    #a1{opacity: 0;
+        position: relative;
+        top: 800px;
+        display: inline;
+        text-align: left;
+        padding-bottom: 30%;
+       
+        
+        }
+        #a2{opacity: 0;
+        position: relative;
+        top: 800px;
+        display: inline;
+        text-align: left;
+        padding-bottom: 30%;
+        
+        } #a3{opacity: 0;
+        position: relative;
+        top: 800px;
+        display: inline;
+        text-align: left;
+        padding-bottom: 30%;
+        
+        }
+        @keyframes op1{
+			from{ opacity: 0;}
+			to{ opacity: 1;}
+        }
+        @keyframes op2{
+			from{ opacity: 0;}
+			to{ opacity: 0.8;}
+		}
+
+    #monitor{position: fixed; background-color: black;
+		 top: 0; right: 0; padding: 5px;
+		 width: 100px; height: 20px;
+         color: gray;}
+         
+    #jj{position: absolute; display: block; left:27.5%;}
+    #sun{position: absolute; display: block; z-index: -9999; top: 270%; width: 60%; opacity: 0.8; right:10px;}
+
+</style>
+<body>
+
+    <div>
+        <img src="jj.gif"  id="jj">
+    </div>
+    <div class="text"  id="a1">
+        그녀의 하얀 팔이<br><br><br><br></div>
+    <br><div class="text" id="a2">
+        내 지평선의<br><br><br><br></div>
+    <br>
+    <div class="text" id="a3">
+            전부였다.<br><br><br><br></div>
+
+
+    <div>
+        <img src="sun.gif" id="sun">
+    </div>
+    
+
+<div id="monitor"></div>
+</body>
+<script type="text/javascript">
+
+    window.onscroll = function(){
+    var t = document.documentElement.scrollTop + document.body.scrollTop;
+    monitor.innerHTML = t.toFixed(1);
+
+    
+
+    if(t >100){a1.style.animation = "op1 3s forwards ";}
+    else{a1.style.animation = "";}
+    if(t >150){a2.style.animation = "op1 4s forwards ";}
+    else{a2.style.animation = "";}
+    if(t >170){a3.style.animation = "op1 5s forwards ";}
+    else{a3.style.animation = "";}
+    if(t >700){sun.style.animation = "op1 5s forwards ";}
+    else{sun.style.animation = "";}
+    }
+
+
+</script>
+</html>
